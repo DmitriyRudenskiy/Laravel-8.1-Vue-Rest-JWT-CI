@@ -15,8 +15,19 @@ php artisan --version
 docker run --rm --interactive --tty \
   --volume $PWD:/app \
   composer require nunomaduro/phpinsights --dev
+
+php composer.phar require nunomaduro/phpinsights --dev
+  
+//
+PHP CodeSniffer Config installed_paths set to ../../slevomat/coding-standard,../../object-calisthenics/phpcs-calisthenics-rules/src
+  
   
 php artisan vendor:publish --provider="NunoMaduro\PhpInsights\Application\Adapters\Laravel\InsightsServiceProvider"
+!!!Unable to locate publishable resources
+>>>
+php artisan clear-compiled
+composer dumpautoload
+>>>
 
 запускаем
 php artisan insights
